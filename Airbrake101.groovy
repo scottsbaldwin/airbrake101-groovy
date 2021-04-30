@@ -58,7 +58,7 @@ class Airbrake101 {
     }
     
     /**
-     * Tries to depost a negative money amount in an account
+     * Tries to deposit a negative money amount in an account
      */
     void demoCase2() {
         try {
