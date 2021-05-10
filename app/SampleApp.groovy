@@ -1,7 +1,7 @@
 // TODO: Add a Grape dependency on io.airbrake, javabrake, 0.2.3
-@Grapes(
-  @Grab(group='io.airbrake', module='javabrake', version='0.2.3')
-)
+// @Grapes(
+//   @Grab(group='io.airbrake', module='javabrake', version='0.2.3')
+// )
 package app
 
 // Our sample app's Bank Account library
@@ -29,13 +29,6 @@ class SampleApp {
         // config.projectId = env['AB_PROJECT_ID'] as int
         // config.projectKey = env['AB_PROJECT_KEY']
         // airbrake = new Notifier(config)
-
-        // Set the environment context property on
-        // each Notice sent to Airbrake.
-        // airbrake.addFilter({ Notice notice ->
-        //     notice.setContext("environment", "demo")
-        //     return notice
-        // })
     }
 
     void makeDeposit(int amount) {
