@@ -10,25 +10,25 @@ import groovy.util.logging.Log
 import java.util.logging.Level
 
 // TODO: Import the necessary packages for the Airbrake notifier (javabrake)
-import io.airbrake.javabrake.Notice
-import io.airbrake.javabrake.Notifier
-import io.airbrake.javabrake.Config
+// import io.airbrake.javabrake.Notice
+// import io.airbrake.javabrake.Notifier
+// import io.airbrake.javabrake.Config
 
 @Log
 class SampleApp {
     BankAccount acct = new BankAccount()
     
     // TODO: Add a field for a global Airbrake notifier used by our application
-    Notifier airbrake
+    // Notifier airbrake
 
     SampleApp() {
         def env = System.getenv()
 
         // TODO: Initialize the global notifier variable
-        def config = new Config()
-        config.projectId = env['AB_PROJECT_ID'] as int
-        config.projectKey = env['AB_PROJECT_KEY']
-        airbrake = new Notifier(config)
+        // def config = new Config()
+        // config.projectId = env['AB_PROJECT_ID'] as int
+        // config.projectKey = env['AB_PROJECT_KEY']
+        // airbrake = new Notifier(config)
 
         // Set the environment context property on
         // each Notice sent to Airbrake.
