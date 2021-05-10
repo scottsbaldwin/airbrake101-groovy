@@ -1,10 +1,9 @@
-// TODO: Add a Grape dependency on io.airbrake, javabrake, 0.2.3
+// TODO: Add a Grape dependency on javabrake
 // @Grapes(
 //   @Grab(group='io.airbrake', module='javabrake', version='0.2.3')
 // )
 package app
 
-// Our sample app's Bank Account library
 import io.airbrake.training.*
 import groovy.util.logging.Log
 import java.util.logging.Level
@@ -22,9 +21,14 @@ class SampleApp {
     // Notifier airbrake
 
     SampleApp() {
-        def env = System.getenv()
+        // TODO: SIMPLE STEP - Initialize the global notifier variable with hard-coded values
+        // def config = new Config()
+        // config.projectId = 000000
+        // config.projectKey = "your_project_key_here"
+        // airbrake = new Notifier(config)
 
-        // TODO: Initialize the global notifier variable
+        // TODO: ADVANCED STEP - Initialize the global notifier variable with hard-coded values
+        // def env = System.getenv()
         // def config = new Config()
         // config.projectId = env['AB_PROJECT_ID'] as int
         // config.projectKey = env['AB_PROJECT_KEY']
