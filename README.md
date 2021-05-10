@@ -15,40 +15,17 @@ You will need an Airbrake project ID and project key in order for your notifier 
 
 ## Usage
 
-You must source your `.airbrake.env` variables file. The `Airbrake101.groovy` script will read values from that file at runtime.
+You must source your `.airbrake.env` variables file. The sample app will read values from that file at runtime.
 
 ```
 source .airbrake.env
 ```
 
-The `Airbrake101` class has the ability to run 3 scenarios on a bank account. Each of the scenarios will encounter an error that will get sent to Airbrake.
-
-### Scenario 1
-
-Scenario 1 will try to deposit money in an account which is not opened. This is not allowed! Trigger scenario 1 by issuing the following command.
+Run the sample app with this command to get the usage help.
 
 ```
-groovy Airbrake101 1
+❯ groovy app/SampleApp
+USAGE: command amount
+    command: either deposit or withdraw
+    amount:  the amount to deposit or withdraw
 ```
-
-After this command exits, open your Airbrake dashboard and find your first error!
-
-### Scenario 2
-
-Scenario 2 will try to deposit a negative money amount in your account. This is not allowed! Trigger scenario 2 by issuing the following command.
-
-```
-groovy Airbrake101 2
-```
-
-Your Airbrake dashboard will show that you have a new error. Try running this command a few times to trigger several occurrences of the same error. What changed in your Airbrake dashboard? Did you find the individual occurrences?
-
-### Scenario 3
-
-Scenario 3 will try to withdraw an amount of money that exceeds your current balance. This is not allowed! Trigger scenario 3 by issuing the following command.
-
-```
-groovy Airbrake101 3
-```
-
-Now your dashboard has a third type, or group, of errors!

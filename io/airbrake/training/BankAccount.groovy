@@ -1,9 +1,9 @@
-package com.airbrake.training
+package io.airbrake.training
 
 import groovy.transform.Synchronized
 
 class BankAccount {
-    String ERROR_ACCOUNT_NOT_OPENED = "You cannot deposit money in an account that is not opened."
+    String ERROR_ACCOUNT_NOT_OPENED = "You cannot interact with an account that is not opened."
     int balance = 0
     boolean isOpened = false
 
