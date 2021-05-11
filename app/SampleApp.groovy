@@ -37,7 +37,10 @@ class SampleApp {
 
     void makeDeposit(int amount) {
         try {
+            // TODO: The bank account must be opened before depositing money
+            // acct.open()
             acct.deposit(amount)
+            log.log(Level.INFO, "${amount} was deposited into the account")
         } catch (UnsupportedOperationException e) {
             log.log(Level.SEVERE, e.message)
             // TODO: Notify Airbrake that an error occurred here
@@ -51,7 +54,10 @@ class SampleApp {
 
     void withdrawMoney(int amount) {
         try {
+            // TODO: The bank account must be opened before withdrawing money
+            // acct.open()
             acct.withdraw(amount)
+            log.log(Level.INFO, "${amount} was withdrawn from the account")
         } catch (UnsupportedOperationException e) {
             log.log(Level.SEVERE, e.message)
             // TODO: Notify Airbrake that an error occurred here
