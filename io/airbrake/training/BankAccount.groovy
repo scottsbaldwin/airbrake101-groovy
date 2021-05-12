@@ -9,8 +9,13 @@ class BankAccount {
 
     @Synchronized
     void open() {
+        open(0)
+    }
+
+    @Synchronized
+    void open(int initialBalance) {
         isOpened = true
-        balance = 0
+        balance = initialBalance
     }
 
     @Synchronized

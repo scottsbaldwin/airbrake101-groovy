@@ -16,7 +16,7 @@ import java.util.logging.Level
 @Log
 class SampleApp {
     BankAccount acct = new BankAccount()
-    
+
     // TODO: Add a field for a global Airbrake notifier used by our application
     // Notifier airbrake
 
